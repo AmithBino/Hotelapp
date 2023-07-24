@@ -11,6 +11,18 @@
       "name": "abin",
       "password": "xyz#200",
       "id": 2
+    },
+    {
+      "email": "alby@test.com",
+      "name": "Alby",
+      "password": "alby@123",
+      "id": 3
+    },
+    {
+      "email": "alan@test.com",
+      "name": "alan",
+      "password": "alan@123",
+      "id": 4
     }
   ]
 }

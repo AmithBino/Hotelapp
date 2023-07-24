@@ -6,6 +6,9 @@
         <input type="text" v-model="email" placeholder="Enter Email"/>
         <input type="password" v-model="password" placeholder="Enter Password"/>
         <button v-on:click="singup">Sign Up</button>
+        <p>
+            <router-link to="/login">Login</router-link>
+        </p>
     </div>
 </template>
 
@@ -34,36 +37,12 @@ export default {
             console.warn(result);
             if(result.status==201)
             {
-                alert("sign up successfully completed");
                 localStorage.setItem("user-info",JSON.stringify(result.data))
+                this.$router.push({name:'HomePage'})
+
             }
         }
     }
 }
 </script>
 
-<style> 
-.logo{
-    width:120px;
-}
-.register input{
-    width: 300px;
-    height: 40px;
-    padding-left: 20px;
-    display: block;
-    margin-bottom: 30px;
-    margin-right: auto;
-    margin-left: auto;
-    border: 1px solid skyblue;
-}
-
-.register button{
-    width : 320px;
-    height: 40px;
-    border: 1px solid skyblue;
-    background:  skyblue;
-    color: #fff;
-    cursor: pointer;
-}
-
-</style>
